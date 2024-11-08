@@ -34,5 +34,10 @@ export const components: ComponentConfig[] = [
     href: '/components/cards',
     title: 'Cards',
     description: 'Display content in a flexible and extensible container.',
+  },
+  {
+    href: '/components/forms',
+    title: 'Forms',
+    description: 'Form elements for collecting and validating user input.',
   }
 ].sort((a, b) => a.title.localeCompare(b.title));

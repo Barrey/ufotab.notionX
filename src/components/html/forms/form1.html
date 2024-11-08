@@ -1,0 +1,53 @@
+<div class="mt-8 w-full max-w-sm p-6 bg-white rounded-lg border border-[#e0e0e0]">
+  <div class="space-y-6">
+    <div class="text-center">
+      <h2 class="text-2xl font-bold text-[#37352f]">Login</h2>
+      <p class="mt-2 text-sm text-[#6b6b6b]">
+        Welcome back! Please enter your details.
+      </p>
+    </div>
+
+    <form class="space-y-4">
+      <div class="space-y-2">
+        <label class="block text-sm font-medium text-[#37352f]" for="email">
+          Email
+        </label>
+        <input type="email" id="email"
+          class="w-full px-3 py-2 text-sm border border-[#e0e0e0] rounded focus:outline-none focus:ring-1 focus:ring-[#37352f] placeholder:text-[#6b6b6b]"
+          placeholder="Enter your email" />
+      </div>
+
+      <div class="space-y-2">
+        <label class="block text-sm font-medium text-[#37352f]" for="password">
+          Password
+        </label>
+        <input type="password" id="password"
+          class="w-full px-3 py-2 text-sm border border-[#e0e0e0] rounded focus:outline-none focus:ring-1 focus:ring-[#37352f] placeholder:text-[#6b6b6b]"
+          placeholder="Enter your password" />
+      </div>
+
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <input type="checkbox" id="remember"
+            class="w-4 h-4 border border-[#e0e0e0] rounded text-[#37352f] focus:ring-[#37352f]" />
+          <label class="ml-2 text-sm text-[#6b6b6b]" for="remember">
+            Remember me
+          </label>
+        </div>
+        <a href="#" class="text-sm text-[#37352f] hover:underline">
+          Forgot password?
+        </a>
+      </div>
+
+      <button type="submit"
+        class="w-full px-4 py-2 bg-[#37352f] text-white text-sm font-medium rounded hover:bg-[#2b2a25] active:bg-[#1f1e1b] transition-colors duration-150 ease-in-out">
+        Sign in
+      </button>
+    </form>
+
+    <p class="text-center text-sm text-[#6b6b6b]">
+      Don't have an account?
+      <a href="#" class="text-[#37352f] hover:underline">Sign up</a>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="border border-[#e0e0e0] p-4 max-w-sm">
+  <form>
+    <div class="flex flex-col gap-4">
+      <h2 class="text-xl font-bold text-[#37352f]">Newsletter Subscription</h2>
+
+      <!-- Floating Label -->
+      <div class="w-full max-w-md">
+        <div class="relative">
+          <input type="text" id="floating-input" placeholder=" "
+            class="block w-full px-3 py-2 text-[#37352f] border border-[#e0e0e0] rounded-md focus:outline-none focus:ring-2 focus:ring-[#37352f] focus:border-transparent peer" />
+          <label for="floating-input"
+            class="absolute text-sm text-[#6b6b6b] duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-[#37352f] left-1">
+            Enter your email
+          </label>
+        </div>
+      </div>
+
+      <!-- Animated Submit -->
+      <div class="w-full max-w-md">
+        <button type="button"
+          class="group w-full px-4 py-2 text-sm text-white bg-[#37352f] rounded-md hover:bg-[#2b2a25] focus:outline-none focus:ring-2 focus:ring-[#37352f] focus:ring-offset-2 transition-all duration-300">
+          <span class="flex items-center justify-center">
+            <span class="group-hover:-translate-x-1 transition-transform duration-300">Submit</span>
+            <svg
+              class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
