@@ -1,0 +1,41 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import PreviewWrapper from '../../components/PreviewWrapper.astro';
+import { readFile } from 'node:fs/promises';
+
+const primaryButton = await readFile(
+  'src/components/html/buttons/button.html',
+  'utf-8'
+);
+const dangerButton = await readFile(
+  'src/components/html/buttons/danger.html',
+  'utf-8'
+);
+---
+
+<DocsLayout title="Buttons - Documentation">
+  <div class="max-w-4xl">
+    <h1 class="text-3xl font-bold mb-4">Buttons</h1>
+    <p class="text-gray-600 mb-8">
+      A collection of button components with different styles and variations.
+    </p>
+
+    <div class="space-y-12">
+      <section>
+        <h2 class="text-xl font-semibold mb-4">Primary Button</h2>
+        <p class="text-gray-600 mb-4">
+          The primary button is used for main actions and calls-to-action.
+        </p>
+        <PreviewWrapper title="Primary Button Example" code={primaryButton} />
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-4">Danger Button</h2>
+        <p class="text-gray-600 mb-4">
+          Danger buttons indicate destructive or irreversible actions.
+        </p>
+        <PreviewWrapper title="Danger Button Example" code={dangerButton} />
+      </section>
+    </div>
+  </div>
+</DocsLayout>

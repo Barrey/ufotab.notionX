@@ -1,0 +1,44 @@
+---
+interface Props {
+  paths: {
+    label: string;
+    href?: string;
+  }[];
+}
+
+const { paths } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="mb-6">
+  <ol class="flex items-center space-x-2 text-sm text-gray-500">
+    <li>
+      <a href="/" class="hover:text-gray-700 transition-colors">Home</a>
+    </li>
+    {
+      paths.map((path, index) => (
+        <li class="flex items-center space-x-2">
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+          {path.href ? (
+            <a href={path.href} class="hover:text-gray-700 transition-colors">
+              {path.label}
+            </a>
+          ) : (
+            <span class="text-gray-900 font-medium">{path.label}</span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>

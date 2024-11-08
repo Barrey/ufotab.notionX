@@ -1,0 +1,124 @@
+---
+import { components } from '../config/components';
+import { Github, X } from 'lucide-react';
+
+// Group components by category
+const categories = {
+  'Getting Started': [
+    { title: 'Introduction', href: '/introduction' },
+    { title: 'Installation', href: '/installation' },
+  ],
+  Components: components,
+  // Resources: [
+  //   { title: 'GitHub', href: 'https://github.com/Barrey/ufotab.notionX' },
+  // ],
+};
+---
+
+<aside
+  class="w-64 h-screen bg-white border-r fixed left-0 top-0 overflow-y-auto flex flex-col justify-between"
+>
+  <div class="p-6">
+    <a href="/" class="flex items-center gap-2 mb-8">
+      <div
+        class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
+      >
+        <span class="text-white font-bold text-xl">U</span>
+      </div>
+      <span
+        class="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent"
+      >
+        UfoTab
+      </span>
+    </a>
+
+    <nav class="space-y-6">
+      {
+        Object.entries(categories).map(([category, items]) => (
+          <div class="space-y-2">
+            <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+              {category}
+            </h2>
+            <ul class="space-y-1">
+              {items.map((item) => {
+                const isActive = Astro.url.pathname === item.href;
+                return (
+                  <li>
+                    <a
+                      href={item.href}
+                      class={`
+                        block px-4 py-2 rounded-md text-sm transition-colors
+                        ${
+                          isActive
+                            ? 'bg-gradient-to-r from-blue-50 to-purple-50 text-blue-600 font-medium'
+                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                        }
+                      `}
+                    >
+                      <div class="flex items-center justify-between">
+                        <span>{item.title}</span>
+                        {isActive && (
+                          <div class="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                        )}
+                      </div>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ))
+      }
+    </nav>
+  </div>
+
+  <div class="p-4 border-t bg-gray-50">
+    <div class="flex items-center gap-2">
+      <a
+        href="https://github.com/Barrey/ufotab.notionX"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:bg-gray-300 inline-flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 transition-colors p-2 rounded-md"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            fill-rule="evenodd"
+            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+      <a
+        href="https://x.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:bg-gray-300 inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors p-2 rounded-md"
+      >
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"
+          ></path></svg
+        >
+      </a>
+    </div>
+  </div>
+
+  <style>
+    aside {
+      scrollbar-width: thin;
+      scrollbar-color: #e5e7eb transparent;
+    }
+
+    aside::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    aside::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    aside::-webkit-scrollbar-thumb {
+      background-color: #e5e7eb;
+      border-radius: 2px;
+    }
+  </style>
+</aside>

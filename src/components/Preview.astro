@@ -1,0 +1,8 @@
+---
+import { Preview as PreviewComponent } from './ui/Preview';
+const { code, title } = Astro.props;
+---
+
+<div class="preview-component">
+  <PreviewComponent client:load code={code} title={title} />
+</div>
