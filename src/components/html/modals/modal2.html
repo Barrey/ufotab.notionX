@@ -1,0 +1,45 @@
+<div class="space-y-4">
+  <div class="flex flex-wrap gap-4">
+    <!-- Small Modal -->
+    <button onclick="document.getElementById('small-modal').classList.remove('hidden')"
+      class="px-4 py-2 bg-[#37352f] text-white text-sm font-medium rounded hover:bg-[#2b2a25] transition-colors duration-150">
+      Small Modal
+    </button>
+    <div id="small-modal"
+      class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 flex items-center justify-center p-4">
+      <div class="animate-modal-enter relative w-full max-w-sm bg-white rounded-lg shadow-lg">
+        <div class="p-4">
+          <button onclick="this.closest('#small-modal').classList.add('hidden')"
+            class="absolute top-2 right-2 text-[#6b6b6b] hover:text-[#37352f] focus:outline-none focus:ring-2 focus:ring-[#37352f] rounded-full p-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <h3 class="text-base font-medium text-[#37352f] mb-2">Small Modal</h3>
+          <p class="text-sm text-[#6b6b6b]">Compact size for simple messages.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Large Modal -->
+    <button onclick="document.getElementById('large-modal').classList.remove('hidden')"
+      class="px-4 py-2 bg-[#37352f] text-white text-sm font-medium rounded hover:bg-[#2b2a25] transition-colors duration-150">
+      Large Modal
+    </button>
+    <div id="large-modal"
+      class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 flex items-center justify-center p-4">
+      <div class="animate-modal-enter relative w-full max-w-2xl bg-white rounded-lg shadow-lg">
+        <div class="p-8">
+          <button onclick="this.closest('#large-modal').classList.add('hidden')"
+            class="absolute top-4 right-4 text-[#6b6b6b] hover:text-[#37352f] focus:outline-none focus:ring-2 focus:ring-[#37352f] rounded-full p-1">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <h3 class="text-xl font-medium text-[#37352f] mb-4">Large Modal</h3>
+          <p class="text-sm text-[#6b6b6b]">Spacious modal for complex content and forms.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

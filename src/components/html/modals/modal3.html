@@ -1,0 +1,95 @@
+<div class="space-y-4">
+  <div class="flex flex-wrap gap-4">
+    <!-- Success Modal -->
+    <button onclick="document.getElementById('success-modal').classList.remove('hidden')"
+      class="px-4 py-2 bg-[#2d7b43] text-white text-sm font-medium rounded hover:bg-[#246935] transition-colors duration-150">
+      Success Modal
+    </button>
+    <div id="success-modal"
+      class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 flex items-center justify-center p-4">
+      <div
+        class="animate-modal-enter relative w-full max-w-md bg-white rounded-lg shadow-lg border-t-4 border-[#2d7b43]">
+        <div class="p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-[#e6f4eb] flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-[#2d7b43]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-medium text-[#37352f]">Success Modal</h3>
+          </div>
+          <p class="text-sm text-[#6b6b6b]">Operation completed successfully.</p>
+          <div class="mt-6 flex justify-end">
+            <button onclick="this.closest('#success-modal').classList.add('hidden')"
+              class="px-4 py-2 bg-[#2d7b43] text-white text-sm font-medium rounded hover:bg-[#246935] transition-colors duration-150">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error Modal -->
+    <button onclick="document.getElementById('error-modal').classList.remove('hidden')"
+      class="px-4 py-2 bg-[#e12d39] text-white text-sm font-medium rounded hover:bg-[#c11f2a] transition-colors duration-150">
+      Error Modal
+    </button>
+    <div id="error-modal"
+      class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 flex items-center justify-center p-4">
+      <div
+        class="animate-modal-enter relative w-full max-w-md bg-white rounded-lg shadow-lg border-t-4 border-[#e12d39]">
+        <div class="p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-[#fde8e8] flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-[#e12d39]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-medium text-[#37352f]">Error Modal</h3>
+          </div>
+          <p class="text-sm text-[#6b6b6b]">An error occurred during the operation.</p>
+          <div class="mt-6 flex justify-end">
+            <button onclick="this.closest('#error-modal').classList.add('hidden')"
+              class="px-4 py-2 bg-[#e12d39] text-white text-sm font-medium rounded hover:bg-[#c11f2a] transition-colors duration-150">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Warning Modal -->
+    <button onclick="document.getElementById('warning-modal').classList.remove('hidden')"
+      class="px-4 py-2 bg-[#f5a623] text-white text-sm font-medium rounded hover:bg-[#dc8c0c] transition-colors duration-150">
+      Warning Modal
+    </button>
+    <div id="warning-modal"
+      class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 flex items-center justify-center p-4">
+      <div
+        class="animate-modal-enter relative w-full max-w-md bg-white rounded-lg shadow-lg border-t-4 border-[#f5a623]">
+        <div class="p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-[#fef6e6] flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-[#f5a623]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-medium text-[#37352f]">Warning Modal</h3>
+          </div>
+          <p class="text-sm text-[#6b6b6b]">Please review this warning message carefully.</p>
+          <div class="mt-6 flex justify-end space-x-3">
+            <button onclick="this.closest('#warning-modal').classList.add('hidden')"
+              class="px-4 py-2 text-[#37352f] text-sm font-medium rounded hover:bg-gray-100 transition-colors duration-150">
+              Cancel
+            </button>
+            <button onclick="this.closest('#warning-modal').classList.add('hidden')"
+              class="px-4 py-2 bg-[#f5a623] text-white text-sm font-medium rounded hover:bg-[#dc8c0c] transition-colors duration-150">
+              Proceed
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

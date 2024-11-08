@@ -1,0 +1,72 @@
+<div class="space-y-4">
+  <button onclick="document.getElementById('base-modal').classList.remove('hidden')"
+    class="px-4 py-2 bg-[#37352f] text-white text-sm font-medium rounded hover:bg-[#2b2a25] transition-colors duration-150">
+    Open Base Modal
+  </button>
+
+  <div id="base-modal"
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 flex items-center justify-center p-4 transition-all"
+    onclick="if(event.target === this) this.classList.add('hidden')" role="dialog" aria-modal="true">
+    <div class="animate-modal-enter relative w-full max-w-md bg-white rounded-lg shadow-lg">
+      <div class="p-6">
+        <button onclick="this.closest('#base-modal').classList.add('hidden')"
+          class="absolute top-4 right-4 text-[#6b6b6b] hover:text-[#37352f] focus:outline-none focus:ring-2 focus:ring-[#37352f] rounded-full p-1">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <h3 class="text-lg font-medium text-[#37352f] mb-4">Base Modal</h3>
+        <p class="text-sm text-[#6b6b6b]">This is the base modal component with minimal styling.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes modalEnter {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-modal-enter {
+    animation: modalEnter 0.2s ease-out;
+  }
+</style>
+
+<script>
+  // Close modal on ESC key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('[id$="-modal"]').forEach(modal => {
+        if (!modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+        }
+      });
+    }
+  });
+
+  // Prevent scroll when modal is open
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.target.classList.contains('hidden')) {
+        document.body.style.overflow = 'auto';
+      } else {
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  document.querySelectorAll('[id$="-modal"]').forEach(modal => {
+    observer.observe(modal, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+  });
+</script>
