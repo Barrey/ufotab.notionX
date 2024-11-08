@@ -54,5 +54,10 @@ export const components: ComponentConfig[] = [
     href: '/components/modals',
     title: 'Modals',
     description: 'Dialog windows that overlay the main content.',
+  },
+  {
+    href: '/components/paginations',
+    title: 'Paginations',
+    description: 'Navigate between pages of content.',
   }
 ].sort((a, b) => a.title.localeCompare(b.title));
