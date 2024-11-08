@@ -24,5 +24,10 @@ export const components: ComponentConfig[] = [
     href: '/components/badges',
     title: 'Badges',
     description: 'Small status indicators for users and content.',
+  },
+  {
+    href: '/components/breadcrumbs',
+    title: 'Breadcrumbs',
+    description: 'Display the current page location within a navigational hierarchy.',
   }
 ];
