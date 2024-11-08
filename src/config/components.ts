@@ -15,4 +15,9 @@ export const components: ComponentConfig[] = [
     title: 'Selects',
     description: 'Select dropdowns with different styles and variations.',
   },
+  {
+    href: '/components/avatars',
+    title: 'Avatars',
+    description: 'Display user avatars with different shapes and sizes.',
+  }
 ];
