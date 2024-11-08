@@ -29,5 +29,10 @@ export const components: ComponentConfig[] = [
     href: '/components/breadcrumbs',
     title: 'Breadcrumbs',
     description: 'Display the current page location within a navigational hierarchy.',
+  },
+  {
+    href: '/components/cards',
+    title: 'Cards',
+    description: 'Display content in a flexible and extensible container.',
   }
-];
+].sort((a, b) => a.title.localeCompare(b.title));
