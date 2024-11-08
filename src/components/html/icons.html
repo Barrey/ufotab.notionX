@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion-style Icons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .copy-notification {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .copy-notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="p-8 bg-white relative">
+    <!-- Copy Notification -->
+    <div id="copyNotification" class="copy-notification fixed bottom-4 right-4 flex items-center bg-[#37352f] text-white px-4 py-2 rounded-lg shadow-lg">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <span>Copied!</span>
+    </div>
+    <section class="w-full max-w-4xl mx-auto space-y-12">
+        <h1 class="text-2xl font-bold text-[#37352f]">Notion-style Icons</h1>
+
+        <!-- Navigation Icons -->
+        <div class="space-y-4">
+            <h2 class="text-lg font-medium text-[#37352f]">Navigation Icons</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Arrow Icons -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Arrows</h3>
+                    <div class="flex gap-2">
+                        <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                            <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M19 12H5M12 19l-7-7 7-7"/>
+                            </svg>
+                        </button>
+                        <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                            <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Menu Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Menu</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors copy-button" onclick="copyToClipboard(this)">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M3 12h18M3 6h18M3 18h18"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Home Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Home</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M3 12l9-9 9 9M5 10v10a2 2 0 002 2h10a2 2 0 002-2V10"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Icons -->
+        <div class="space-y-4">
+            <h2 class="text-lg font-medium text-[#37352f]">Action Icons</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Add Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Add</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Edit Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Edit</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                            <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Delete Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Delete</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2M10 11v6M14 11v6"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Share Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Share</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Icons -->
+        <div class="space-y-4">
+            <h2 class="text-lg font-medium text-[#37352f]">Status Icons</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Check Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Check</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Warning Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Warning</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4M12 17h.01"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Info Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Info</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Icons -->
+        <div class="space-y-4">
+            <h2 class="text-lg font-medium text-[#37352f]">Content Icons</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Document Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Document</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Folder Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Folder</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Image Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Image</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="M21 15l-5-5L5 21"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- UI Control Icons -->
+        <div class="space-y-4">
+            <h2 class="text-lg font-medium text-[#37352f]">UI Control Icons</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Search Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Search</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="M21 21l-4.35-4.35"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Settings Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Settings</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- More Icon -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">More</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="1"/>
+                            <circle cx="19" cy="12" r="1"/>
+                            <circle cx="5" cy="12" r="1"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive States -->
+        <div class="space-y-4">
+            <h2 class="text-lg font-medium text-[#37352f]">Interactive States</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Default State -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Default</h3>
+                    <button class="p-2 hover:bg-[#f1f1ef] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Focus State -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Focus</h3>
+                    <button class="p-2 bg-[#f1f1ef] rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#37352f] focus:ring-offset-2">
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Active State -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Active</h3>
+                    <button class="p-2 bg-[#e0e0e0] rounded-lg transition-colors">
+                        <svg class="w-4 h-4 text-[#2b2a25]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Disabled State -->
+                <div class="p-4 border border-[#e0e0e0] rounded-lg space-y-3">
+                    <h3 class="text-sm font-medium text-[#6b6b6b]">Disabled</h3>
+                    <button class="p-2 rounded-lg transition-colors opacity-50 cursor-not-allowed" disabled>
+                        <svg class="w-4 h-4 text-[#37352f]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function copyToClipboard(button) {
+            // Get the SVG content
+            const svg = button.querySelector('svg').outerHTML;
+            
+            // Create a temporary textarea
+            const textarea = document.createElement('textarea');
+            textarea.value = svg;
+            document.body.appendChild(textarea);
+            
+            // Copy the text
+            textarea.select();
+            document.execCommand('copy');
+            
+            // Remove the textarea
+            document.body.removeChild(textarea);
+            
+            // Show notification
+            const notification = document.getElementById('copyNotification');
+            notification.classList.add('show');
+            
+            // Hide notification after 2 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 2000);
+        }
+
+        // Add click handler to all icon buttons
+        document.querySelectorAll('button:not(.copy-button)').forEach(button => {
+            button.classList.add('copy-button');
+            button.setAttribute('onclick', 'copyToClipboard(this)');
+        });
+    </script>
+</body>
+</html>
