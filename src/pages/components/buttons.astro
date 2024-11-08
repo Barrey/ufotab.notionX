@@ -3,33 +3,50 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
 import PreviewWrapper from '../../components/PreviewWrapper.astro';
 import { readFile } from 'node:fs/promises';
 
-const button1 = await readFile(
-  'src/components/html/buttons/button1.html',
-  'utf-8'
-);
-const button2 = await readFile(
-  'src/components/html/buttons/button2.html',
-  'utf-8'
-);
-const button3 = await readFile(
-  'src/components/html/buttons/button3.html',
-  'utf-8'
-);
-const button4 = await readFile(
-  'src/components/html/buttons/button4.html',
-  'utf-8'
-);
-const button5 = await readFile(
-  'src/components/html/buttons/button5.html',
-  'utf-8'
-);
-const button6 = await readFile(
-  'src/components/html/buttons/button6.html',
-  'utf-8'
-);
-const button7 = await readFile(
-  'src/components/html/buttons/button7.html',
-  'utf-8'
+const buttonComponents = [
+  {
+    path: 'src/components/html/buttons/button1.html',
+    title: 'Button Example',
+    description:
+      'The button component is used for general actions and interactions.',
+  },
+  {
+    path: 'src/components/html/buttons/button2.html',
+    title: 'Button with Icon Example',
+    description: 'The button component with color variants.',
+  },
+  {
+    path: 'src/components/html/buttons/button3.html',
+    title: 'Button with size variations',
+    description: 'The button component with size variations.',
+  },
+  {
+    path: 'src/components/html/buttons/button4.html',
+    title: 'Button with states',
+    description: 'The button component with states.',
+  },
+  {
+    path: 'src/components/html/buttons/button5.html',
+    title: 'Button with contextual usage',
+    description: 'The button component with contextual usage.',
+  },
+  {
+    path: 'src/components/html/buttons/button6.html',
+    title: 'Button in group',
+    description: 'The button component in group.',
+  },
+  {
+    path: 'src/components/html/buttons/button7.html',
+    title: 'Button with special effects',
+    description: 'The button component with special effects.',
+  },
+];
+
+const buttons = await Promise.all(
+  buttonComponents.map(async (file) => ({
+    ...file,
+    code: await readFile(file.path, 'utf-8'),
+  }))
 );
 ---
 
@@ -40,50 +57,14 @@ const button7 = await readFile(
     </p>
 
     <div class="space-y-12">
-      <section>
-        <p class="text-gray-600 mb-4">
-          The button component is used for general actions and interactions.
-        </p>
-        <PreviewWrapper title="Button Example" code={button1} />
-      </section>
-
-      <section>
-        <p class="text-gray-600 mb-4">
-          The button component with color variants.
-        </p>
-        <PreviewWrapper title="Button with Icon Example" code={button2} />
-      </section>
-
-      <section>
-        <p class="text-gray-600 mb-4">
-          The button component with size variations.
-        </p>
-        <PreviewWrapper title="Button with size variations" code={button3} />
-      </section>
-
-      <section>
-        <p class="text-gray-600 mb-4">The button component with states.</p>
-        <PreviewWrapper title="Button with states" code={button4} />
-      </section>
-
-      <section>
-        <p class="text-gray-600 mb-4">
-          The button component with contextual usage.
-        </p>
-        <PreviewWrapper title="Button with contextual usage" code={button5} />
-      </section>
-
-      <section>
-        <p class="text-gray-600 mb-4">The button component in group.</p>
-        <PreviewWrapper title="Button in group" code={button6} />
-      </section>
-
-      <section>
-        <p class="text-gray-600 mb-4">
-          The button component with special effects.
-        </p>
-        <PreviewWrapper title="Button with special effects" code={button7} />
-      </section>
+      {
+        buttons.map((button) => (
+          <section>
+            <p class="text-gray-600 mb-4">{button.description}</p>
+            <PreviewWrapper title={button.title} code={button.code} />
+          </section>
+        ))
+      }
     </div>
   </div>
 </DocsLayout>
