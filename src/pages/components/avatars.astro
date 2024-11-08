@@ -1,0 +1,48 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import PreviewWrapper from '../../components/PreviewWrapper.astro';
+import { readFile } from 'node:fs/promises';
+
+const avatarComponents = [
+  {
+    path: 'src/components/html/avatars/avatar1.html',
+    title: 'Avatar Example',
+    description: 'The avatar component is used for general purposes.',
+  },
+  {
+    path: 'src/components/html/avatars/avatar2.html',
+    title: 'Avatar with size variations',
+    description: 'The avatar component with icon.',
+  },
+  {
+    path: 'src/components/html/avatars/avatar3.html',
+    title: 'Avatar with color variations',
+    description: 'The avatar component with color variations.',
+  },
+];
+const avatars = await Promise.all(
+  avatarComponents.map(async (file) => ({
+    ...file,
+    code: await readFile(file.path, 'utf-8'),
+  }))
+);
+---
+
+<DocsLayout title="Avatars - Documentation">
+  <div class="max-w-4xl">
+    <p class="text-gray-600 mb-8">
+      A collection of button components with different styles and variations.
+    </p>
+
+    <div class="space-y-12">
+      {
+        avatars.map((button) => (
+          <section>
+            <p class="text-gray-600 mb-4">{button.description}</p>
+            <PreviewWrapper title={button.title} code={button.code} />
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</DocsLayout>
