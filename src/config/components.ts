@@ -59,5 +59,10 @@ export const components: ComponentConfig[] = [
     href: '/components/paginations',
     title: 'Paginations',
     description: 'Navigate between pages of content.',
+  },
+  {
+    href: '/components/radios',
+    title: 'Radios',
+    description: 'Select one option from a list of options.',
   }
 ].sort((a, b) => a.title.localeCompare(b.title));

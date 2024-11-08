@@ -1,0 +1,29 @@
+<div class="space-y-4">
+  <!-- Default State -->
+  <label class="flex items-center group">
+    <input type="radio" name="states"
+      class="w-4 h-4 text-[#37352f] border-[#e0e0e0] focus:ring-[#37352f] focus:ring-offset-2 cursor-pointer" />
+    <span class="ml-2 text-sm text-[#37352f] group-hover:text-[#2b2a25]">Default State</span>
+  </label>
+  <!-- Selected State -->
+  <label class="flex items-center group">
+    <input type="radio" name="states"
+      class="w-4 h-4 text-[#37352f] border-[#e0e0e0] focus:ring-[#37352f] focus:ring-offset-2 cursor-pointer" checked />
+    <span class="ml-2 text-sm text-[#37352f] group-hover:text-[#2b2a25]">Selected State</span>
+  </label>
+  <!-- Disabled State -->
+  <label class="flex items-center opacity-50 cursor-not-allowed">
+    <input type="radio" name="states-disabled" class="w-4 h-4 text-[#37352f] border-[#e0e0e0] cursor-not-allowed"
+      disabled />
+    <span class="ml-2 text-sm text-[#37352f]">Disabled State</span>
+  </label>
+  <!-- Error State -->
+  <div class="space-y-1">
+    <label class="flex items-center group">
+      <input type="radio" name="states-error"
+        class="w-4 h-4 text-[#ff4d4f] border-[#ff4d4f] focus:ring-[#ff4d4f] focus:ring-offset-2 cursor-pointer" />
+      <span class="ml-2 text-sm text-[#37352f] group-hover:text-[#2b2a25]">Error State</span>
+    </label>
+    <p class="text-xs text-[#ff4d4f] ml-6">Error message goes here</p>
+  </div>
+</div>

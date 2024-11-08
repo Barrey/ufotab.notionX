@@ -1,0 +1,54 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import PreviewWrapper from '../../components/PreviewWrapper.astro';
+import { readFile } from 'node:fs/promises';
+
+const radioComponents = [
+  {
+    path: 'src/components/html/radios/radio1.html',
+    title: 'Radio Example',
+    description: 'The radio component is used for general purposes.',
+  },
+  {
+    path: 'src/components/html/radios/radio2.html',
+    title: 'Radio with size variations',
+    description: 'The radio component with size variations.',
+  },
+  {
+    path: 'src/components/html/radios/radio3.html',
+    title: 'Radio with state variations',
+    description: 'The radio component with state variations.',
+  },
+  {
+    path: 'src/components/html/radios/radio4.html',
+    title: 'Radio with group',
+    description: 'The radio component with group.',
+  },
+];
+
+const radios = await Promise.all(
+  radioComponents.map(async (file) => ({
+    ...file,
+    code: await readFile(file.path, 'utf-8'),
+  }))
+);
+---
+
+<DocsLayout title="Radios - Documentation">
+  <div class="max-w-4xl">
+    <p class="text-gray-600 mb-8">
+      A collection of radio components with different styles and variations.
+    </p>
+
+    <div class="space-y-12">
+      {
+        radios.map((radio) => (
+          <section>
+            <p class="text-gray-600 mb-4">{radio.description}</p>
+            <PreviewWrapper title={radio.title} code={radio.code} />
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</DocsLayout>
