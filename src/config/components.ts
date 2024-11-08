@@ -39,5 +39,10 @@ export const components: ComponentConfig[] = [
     href: '/components/forms',
     title: 'Forms',
     description: 'Form elements for collecting and validating user input.',
+  },
+  {
+    href: '/components/inputs',
+    title: 'Inputs',
+    description: 'Text fields and text areas for collecting user input.',
   }
 ].sort((a, b) => a.title.localeCompare(b.title));
