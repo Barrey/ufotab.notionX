@@ -1,0 +1,68 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import PreviewWrapper from '../../components/PreviewWrapper.astro';
+import { readFile } from 'node:fs/promises';
+
+const badgeComponents = [
+  {
+    path: 'src/components/html/badges/badge1.html',
+    title: 'Badge Example',
+    description: 'The badge component is used for general purposes.',
+  },
+  {
+    path: 'src/components/html/badges/badge2.html',
+    title: 'Badge with size variations',
+    description: 'The badge component with size variations.',
+  },
+  {
+    path: 'src/components/html/badges/badge3.html',
+    title: 'Badge with color variations',
+    description: 'The badge component with color variations.',
+  },
+  {
+    path: 'src/components/html/badges/badge4.html',
+    title: 'Badge with states',
+    description: 'The badge component with states.',
+  },
+  {
+    path: 'src/components/html/badges/badge5.html',
+    title: 'Badge with contextual usage',
+    description: 'The badge component with contextual usage.',
+  },
+  {
+    path: 'src/components/html/badges/badge6.html',
+    title: 'Badge in group',
+    description: 'The badge component in group.',
+  },
+  {
+    path: 'src/components/html/badges/badge7.html',
+    title: 'Badge with special effects',
+    description: 'The badge component with special effects.',
+  },
+];
+const badges = await Promise.all(
+  badgeComponents.map(async (file) => ({
+    ...file,
+    code: await readFile(file.path, 'utf-8'),
+  }))
+);
+---
+
+<DocsLayout title="Badges - Documentation">
+  <div class="max-w-4xl">
+    <p class="text-gray-600 mb-8">
+      A collection of badge components with different styles and variations.
+    </p>
+
+    <div class="space-y-12">
+      {
+        badges.map((badge) => (
+          <section>
+            <p class="text-gray-600 mb-4">{badge.description}</p>
+            <PreviewWrapper title={badge.title} code={badge.code} />
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</DocsLayout>

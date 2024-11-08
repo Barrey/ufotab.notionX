@@ -19,5 +19,10 @@ export const components: ComponentConfig[] = [
     href: '/components/avatars',
     title: 'Avatars',
     description: 'Display user avatars with different shapes and sizes.',
+  },
+  {
+    href: '/components/badges',
+    title: 'Badges',
+    description: 'Small status indicators for users and content.',
   }
 ];

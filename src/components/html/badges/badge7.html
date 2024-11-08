@@ -1,0 +1,26 @@
+<div class="flex flex-wrap gap-2">
+  <!-- Truncated -->
+  <span
+    class="inline-flex items-center px-2.5 py-1 text-sm font-medium bg-[#f1f1ef] text-[#37352f] rounded max-w-[120px]">
+    <span class="truncate">This is a very long badge text that will be truncated</span>
+  </span>
+
+  <!-- With Tooltip -->
+  <div class="relative group">
+    <span
+      class="inline-flex items-center px-2.5 py-1 text-sm font-medium bg-[#f1f1ef] text-[#37352f] rounded cursor-help">
+      Hover for info
+    </span>
+    <div
+      class="absolute bottom-full mb-2 px-2 py-1 text-xs text-white bg-[#37352f] rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+      Tooltip content here
+      <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#37352f]"></div>
+    </div>
+  </div>
+
+  <!-- Loading State -->
+  <span
+    class="inline-flex items-center px-2.5 py-1 text-sm font-medium bg-[#f1f1ef] text-[#37352f] rounded animate-pulse">
+    Loading...
+  </span>
+</div>
