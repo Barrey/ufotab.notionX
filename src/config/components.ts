@@ -71,5 +71,10 @@ export const components: ComponentConfig[] = [
     href: '/components/tables',
     title: 'Tables',
     description: 'Display data in a tabular format.',
+  },
+  {
+    href: '/components/tabs',
+    title: 'Tabs',
+    description: 'Organize content into separate views.',
   }
 ].sort((a, b) => a.title.localeCompare(b.title));

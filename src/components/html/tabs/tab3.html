@@ -1,0 +1,36 @@
+<div class="space-y-6">
+  <div class="border border-[#e0e0e0] rounded-lg">
+    <div class="border-b border-[#e0e0e0] overflow-x-auto">
+      <nav class="flex min-w-max" aria-label="Tab states" role="tablist">
+        <button role="tab" aria-selected="true"
+          class="px-4 py-2 text-sm font-medium text-[#37352f] border-b-2 border-[#37352f]">
+          Active
+        </button>
+        <button role="tab" aria-selected="false"
+          class="px-4 py-2 text-sm font-medium text-[#6b6b6b] border-b-2 border-transparent hover:text-[#37352f] hover:bg-[#f7f7f7]">
+          Hover
+        </button>
+        <button role="tab" aria-selected="false" disabled
+          class="px-4 py-2 text-sm font-medium text-[#6b6b6b] opacity-50 cursor-not-allowed">
+          Disabled
+        </button>
+        <button role="tab" aria-selected="false"
+          class="px-4 py-2 text-sm font-medium text-[#6b6b6b] border-b-2 border-transparent focus:outline-none focus:ring-2 focus:ring-[#37352f] focus:ring-offset-2">
+          Focus
+        </button>
+        <button role="tab" aria-selected="false" class="px-4 py-2 text-sm font-medium text-[#6b6b6b] flex items-center">
+          <svg class="animate-spin -ml-1 mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+            </path>
+          </svg>
+          Loading
+        </button>
+      </nav>
+    </div>
+    <div class="p-4">
+      <p class="text-sm text-[#37352f]">Tab content goes here</p>
+    </div>
+  </div>
+</div>

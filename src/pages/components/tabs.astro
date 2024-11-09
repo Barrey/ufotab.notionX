@@ -1,0 +1,60 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import PreviewWrapper from '../../components/PreviewWrapper.astro';
+import { readFile } from 'node:fs/promises';
+
+const tabComponents = [
+  {
+    path: 'src/components/html/tabs/tab1.html',
+    title: 'Tab Example',
+    description: 'The tab component is used for general purposes.',
+  },
+  {
+    path: 'src/components/html/tabs/tab2.html',
+    title: 'Tab with size variations',
+    description: 'The tab component with size variations.',
+  },
+  {
+    path: 'src/components/html/tabs/tab3.html',
+    title: 'Tab with state variations',
+    description: 'The tab component with state variations.',
+  },
+  {
+    path: 'src/components/html/tabs/tab4.html',
+    title: 'Tab with contextual usage',
+    description: 'The tab component with contextual usage.',
+  },
+  {
+    path: 'src/components/html/tabs/tab5.html',
+    title: 'Tab with responsive design',
+    description: 'The tab component with responsive design.',
+  },
+];
+
+const table = await Promise.all(
+  tabComponents.map(async (file) => ({
+    ...file,
+    code: await readFile(file.path, 'utf-8'),
+  }))
+);
+---
+
+<DocsLayout title="Tabs - Documentation">
+  <div class="max-w-4xl">
+    <p class="text-gray-600 mb-8">
+      A collection of tab components with different styles and variations.
+    </p>
+
+    <div class="space-y-12">
+      {
+        table.map((table) => (
+          <PreviewWrapper
+            code={table.code}
+            title={table.title}
+            description={table.description}
+          />
+        ))
+      }
+    </div>
+  </div>
+</DocsLayout>
