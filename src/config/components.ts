@@ -76,5 +76,10 @@ export const components: ComponentConfig[] = [
     href: '/components/tabs',
     title: 'Tabs',
     description: 'Organize content into separate views.',
+  },
+  {
+    href: '/components/toggles',
+    title: 'Toggles',
+    description: 'Switch between two states.',
   }
 ].sort((a, b) => a.title.localeCompare(b.title));
