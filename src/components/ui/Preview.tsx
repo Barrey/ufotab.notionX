@@ -33,7 +33,7 @@ export function Preview({ code, title }: PreviewProps) {
 
       <div className="p-4 flex justify-center h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
         <div
-          className={`${viewportClasses[view]} transition-all duration-300 border border-[#e0e0e0] `}
+          className={`${viewportClasses[view]} transition-all duration-300 border border-[#e0e0e0] bg-gray-50`}
         >
           <div
             className="rounded p-4"
