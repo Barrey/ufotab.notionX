@@ -1,0 +1,390 @@
+<div class="overflow-x-auto">
+  <table class="min-w-full border-separate border-spacing-0  max-h-40 h-32">
+    <!-- Sticky Header -->
+    <thead class="bg-white sticky top-0 z-10">
+      <tr>
+        <!-- Checkbox Header -->
+        <th class="sticky left-0 bg-white px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center justify-start">
+            <input type="checkbox" class="w-4 h-4 text-[#37352f] border-[#e0e0e0] rounded focus:ring-[#37352f]">
+          </div>
+        </th>
+
+        <!-- Name Column with Sort -->
+        <th class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center justify-between group cursor-pointer">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#6b6b6b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+              </svg>
+              <span class="text-sm font-medium text-[#37352f]">Name</span>
+            </div>
+            <div class="flex items-center gap-1 opacity-0 group-hover:opacity-100">
+              <svg class="w-4 h-4 text-[#6b6b6b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+              </svg>
+            </div>
+          </div>
+        </th>
+
+        <!-- Status Column -->
+        <th class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center justify-between group cursor-pointer">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#6b6b6b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+              <span class="text-sm font-medium text-[#37352f]">Status</span>
+            </div>
+            <svg class="w-4 h-4 text-[#6b6b6b] opacity-0 group-hover:opacity-100" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            </svg>
+          </div>
+        </th>
+
+        <!-- Date Column -->
+        <th class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center justify-between group cursor-pointer">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#6b6b6b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span class="text-sm font-medium text-[#37352f]">Date</span>
+            </div>
+          </div>
+        </th>
+
+        <!-- Tags Column -->
+        <th class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center justify-between group cursor-pointer">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#6b6b6b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+              </svg>
+              <span class="text-sm font-medium text-[#37352f]">Tags</span>
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+
+    <!-- Table Body -->
+    <tbody>
+      <!-- Row 1 -->
+      <tr class="group hover:bg-[#f7f7f7]">
+        <td class="sticky left-0 bg-white group-hover:bg-[#f7f7f7] px-3 py-2 border-b border-[#e0e0e0]">
+          <input type="checkbox" class="w-4 h-4 text-[#37352f] border-[#e0e0e0] rounded focus:ring-[#37352f]">
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded bg-[#e8f1fd] flex items-center justify-center">
+              <span class="text-xs font-medium text-[#1a5fb4]">P</span>
+            </div>
+            <span class="text-sm text-[#37352f]">Project Alpha</span>
+          </div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#e6f4eb] text-[#2d7b43] rounded">
+            Active
+          </span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="text-sm text-[#6b6b6b]">Nov 7, 2024</span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex gap-1">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              Feature
+            </span>
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              UI
+            </span>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Row 1 -->
+      <tr class="group hover:bg-[#f7f7f7]">
+        <td class="sticky left-0 bg-white group-hover:bg-[#f7f7f7] px-3 py-2 border-b border-[#e0e0e0]">
+          <input type="checkbox" class="w-4 h-4 text-[#37352f] border-[#e0e0e0] rounded focus:ring-[#37352f]">
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded bg-[#e8f1fd] flex items-center justify-center">
+              <span class="text-xs font-medium text-[#1a5fb4]">P</span>
+            </div>
+            <span class="text-sm text-[#37352f]">Project Alpha</span>
+          </div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#e6f4eb] text-[#2d7b43] rounded">
+            Active
+          </span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="text-sm text-[#6b6b6b]">Nov 7, 2024</span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex gap-1">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              Feature
+            </span>
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              UI
+            </span>
+          </div>
+        </td>
+      </tr><!-- Row 1 -->
+      <tr class="group hover:bg-[#f7f7f7]">
+        <td class="sticky left-0 bg-white group-hover:bg-[#f7f7f7] px-3 py-2 border-b border-[#e0e0e0]">
+          <input type="checkbox" class="w-4 h-4 text-[#37352f] border-[#e0e0e0] rounded focus:ring-[#37352f]">
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded bg-[#e8f1fd] flex items-center justify-center">
+              <span class="text-xs font-medium text-[#1a5fb4]">P</span>
+            </div>
+            <span class="text-sm text-[#37352f]">Project Alpha</span>
+          </div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#e6f4eb] text-[#2d7b43] rounded">
+            Active
+          </span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="text-sm text-[#6b6b6b]">Nov 7, 2024</span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex gap-1">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              Feature
+            </span>
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              UI
+            </span>
+          </div>
+        </td>
+      </tr><!-- Row 1 -->
+      <tr class="group hover:bg-[#f7f7f7]">
+        <td class="sticky left-0 bg-white group-hover:bg-[#f7f7f7] px-3 py-2 border-b border-[#e0e0e0]">
+          <input type="checkbox" class="w-4 h-4 text-[#37352f] border-[#e0e0e0] rounded focus:ring-[#37352f]">
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded bg-[#e8f1fd] flex items-center justify-center">
+              <span class="text-xs font-medium text-[#1a5fb4]">P</span>
+            </div>
+            <span class="text-sm text-[#37352f]">Project Alpha</span>
+          </div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#e6f4eb] text-[#2d7b43] rounded">
+            Active
+          </span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="text-sm text-[#6b6b6b]">Nov 7, 2024</span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex gap-1">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              Feature
+            </span>
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              UI
+            </span>
+          </div>
+        </td>
+      </tr><!-- Row 1 -->
+      <tr class="group hover:bg-[#f7f7f7]">
+        <td class="sticky left-0 bg-white group-hover:bg-[#f7f7f7] px-3 py-2 border-b border-[#e0e0e0]">
+          <input type="checkbox" class="w-4 h-4 text-[#37352f] border-[#e0e0e0] rounded focus:ring-[#37352f]">
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded bg-[#e8f1fd] flex items-center justify-center">
+              <span class="text-xs font-medium text-[#1a5fb4]">P</span>
+            </div>
+            <span class="text-sm text-[#37352f]">Project Alpha</span>
+          </div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#e6f4eb] text-[#2d7b43] rounded">
+            Active
+          </span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="text-sm text-[#6b6b6b]">Nov 7, 2024</span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex gap-1">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              Feature
+            </span>
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              UI
+            </span>
+          </div>
+        </td>
+      </tr><!-- Row 1 -->
+      <tr class="group hover:bg-[#f7f7f7]">
+        <td class="sticky left-0 bg-white group-hover:bg-[#f7f7f7] px-3 py-2 border-b border-[#e0e0e0]">
+          <input type="checkbox" class="w-4 h-4 text-[#37352f] border-[#e0e0e0] rounded focus:ring-[#37352f]">
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded bg-[#e8f1fd] flex items-center justify-center">
+              <span class="text-xs font-medium text-[#1a5fb4]">P</span>
+            </div>
+            <span class="text-sm text-[#37352f]">Project Alpha</span>
+          </div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#e6f4eb] text-[#2d7b43] rounded">
+            Active
+          </span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="text-sm text-[#6b6b6b]">Nov 7, 2024</span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex gap-1">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              Feature
+            </span>
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              UI
+            </span>
+          </div>
+        </td>
+      </tr><!-- Row 1 -->
+      <tr class="group hover:bg-[#f7f7f7]">
+        <td class="sticky left-0 bg-white group-hover:bg-[#f7f7f7] px-3 py-2 border-b border-[#e0e0e0]">
+          <input type="checkbox" class="w-4 h-4 text-[#37352f] border-[#e0e0e0] rounded focus:ring-[#37352f]">
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded bg-[#e8f1fd] flex items-center justify-center">
+              <span class="text-xs font-medium text-[#1a5fb4]">P</span>
+            </div>
+            <span class="text-sm text-[#37352f]">Project Alpha</span>
+          </div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#e6f4eb] text-[#2d7b43] rounded">
+            Active
+          </span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="text-sm text-[#6b6b6b]">Nov 7, 2024</span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex gap-1">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              Feature
+            </span>
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              UI
+            </span>
+          </div>
+        </td>
+      </tr><!-- Row 1 -->
+      <tr class="group hover:bg-[#f7f7f7]">
+        <td class="sticky left-0 bg-white group-hover:bg-[#f7f7f7] px-3 py-2 border-b border-[#e0e0e0]">
+          <input type="checkbox" class="w-4 h-4 text-[#37352f] border-[#e0e0e0] rounded focus:ring-[#37352f]">
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded bg-[#e8f1fd] flex items-center justify-center">
+              <span class="text-xs font-medium text-[#1a5fb4]">P</span>
+            </div>
+            <span class="text-sm text-[#37352f]">Project Alpha</span>
+          </div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#e6f4eb] text-[#2d7b43] rounded">
+            Active
+          </span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="text-sm text-[#6b6b6b]">Nov 7, 2024</span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex gap-1">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              Feature
+            </span>
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              UI
+            </span>
+          </div>
+        </td>
+      </tr>
+
+
+      <!-- Row 2 -->
+      <tr class="group hover:bg-[#f7f7f7]">
+        <td class="sticky left-0 bg-white group-hover:bg-[#f7f7f7] px-3 py-2 border-b border-[#e0e0e0]">
+          <input type="checkbox" class="w-4 h-4 text-[#37352f] border-[#e0e0e0] rounded focus:ring-[#37352f]">
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded bg-[#fde8e8] flex items-center justify-center">
+              <span class="text-xs font-medium text-[#e12d39]">B</span>
+            </div>
+            <span class="text-sm text-[#37352f]">Bug Fix #123</span>
+          </div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#fde8e8] text-[#e12d39] rounded">
+            Critical
+          </span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <span class="text-sm text-[#6b6b6b]">Nov 8, 2024</span>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex gap-1">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              Bug
+            </span>
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-[#f1f1ef] text-[#37352f] rounded">
+              Backend
+            </span>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Loading State Row -->
+      <tr class="group hover:bg-[#f7f7f7]">
+        <td class="sticky left-0 bg-white group-hover:bg-[#f7f7f7] px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="w-4 h-4 bg-[#f1f1ef] rounded animate-pulse"></div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 bg-[#f1f1ef] rounded animate-pulse"></div>
+            <div class="w-24 h-4 bg-[#f1f1ef] rounded animate-pulse"></div>
+          </div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="w-16 h-4 bg-[#f1f1ef] rounded animate-pulse"></div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="w-20 h-4 bg-[#f1f1ef] rounded animate-pulse"></div>
+        </td>
+        <td class="px-3 py-2 border-b border-[#e0e0e0]">
+          <div class="flex gap-1">
+            <div class="w-12 h-4 bg-[#f1f1ef] rounded animate-pulse"></div>
+            <div class="w-12 h-4 bg-[#f1f1ef] rounded animate-pulse"></div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

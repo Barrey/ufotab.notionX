@@ -1,3 +1,5 @@
+import { title } from "node:process";
+
 export interface ComponentConfig {
   href: string;
   title: string;
@@ -64,5 +66,10 @@ export const components: ComponentConfig[] = [
     href: '/components/radios',
     title: 'Radios',
     description: 'Select one option from a list of options.',
+  },
+  {
+    href: '/components/tables',
+    title: 'Tables',
+    description: 'Display data in a tabular format.',
   }
 ].sort((a, b) => a.title.localeCompare(b.title));
