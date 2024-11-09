@@ -1,40 +1,68 @@
-# Astro Starter Kit: Basics
+<div align="center">
+  <img src="notionx.webp" alt="NotionX Tailwind Blocks" width="100%" />
+  
+  # NotionX Tailwind Blocks
 
-```sh
-npm create astro@latest -- --template basics
-```
+  <p align="center">
+    <strong>Production-ready Tailwind CSS components. No installation required.</strong>
+  </p>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+  <p align="center">
+    Copy. Paste. Ship. Beautiful UI components in seconds.
+  </p>
+</div>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<div align="center">
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-Ready-06B6D4)](https://tailwindcss.com/)
+  [![Mobile First](https://img.shields.io/badge/Mobile%20First-Ready-blue)](https://tailwindcss.com/docs/responsive-design)
+  
+</div>
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## ⚡ The Fastest Way to Beautiful UIs
 
-## 🚀 Project Structure
+Skip the setup. Forget about installing packages. NotionX Tailwind Blocks gives you:
 
-Inside of your Astro project, you'll see the following folders and files:
+- 🚀 **Just Copy & Paste** - No npm install, no dependencies
+- 💅 **Production-Ready Design** - Professionally crafted components
+- 📱 **Responsive by Default** - Looks great on any device
+- ♿ **Accessible Components** - Built following WCAG guidelines
+- 🎯 **Zero Config** - Works with any Tailwind CSS project
+- ⚡ **Instant Usage** - No build steps, no compilation needed
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🎯 Perfect For
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- 🏃‍♂️ **Rapid Prototyping** - Build MVPs and prototypes at lightning speed
+- 🎨 **Design Systems** - Start with battle-tested components
+- 🚀 **Landing Pages** - Create stunning marketing pages in minutes
+- 💼 **Business Websites** - Professional components for company sites
+- 📱 **Web Applications** - Essential UI building blocks for any web app
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🚀 Getting Started
 
-Any static assets, like images, can be placed in the `public/` directory.
+1. Make sure you have Tailwind CSS installed in your project
+2. Browse our component library
+3. Find a component you like
+4. Copy the code
+5. Paste into your project
+6. That's it! No really, that's all you need to do 🎉
+
+## 🎨 Component Categories
+
+- **Avatars** - User profiles and image displays
+- **Badges** - Status indicators and labels
+- **Breadcrumbs** - Navigation trails
+- **Buttons** - Actions and links
+- **Cards** - Content containers
+- **Forms** - User input collections
+- **Inputs** - Text fields and controls
+- **Lists** - Content organization
+- **Modals** - Overlay dialogs
+- **Tables** - Data presentation
+- **Tabs** - Content organization
+- **Toggles** - Interactive controls
+- And many more, with new components added regularly!
 
 ## 🧞 Commands
 
@@ -48,7 +76,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
