@@ -81,5 +81,10 @@ export const components: ComponentConfig[] = [
     href: '/components/toggles',
     title: 'Toggles',
     description: 'Switch between two states.',
+  },
+  {
+    href: '/components/icons',
+    title: 'Icons',
+    description: 'List of icon libraries.',
   }
 ].sort((a, b) => a.title.localeCompare(b.title));

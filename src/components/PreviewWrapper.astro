@@ -1,9 +1,9 @@
 ---
 import { Preview } from './ui/Preview';
 
-const { code, title } = Astro.props;
+const { code, title, hideCode } = Astro.props;
 ---
 
 <div class="preview-wrapper">
-  <Preview client:load code={code} title={title} />
+  <Preview client:load code={code} title={title} hideCode={hideCode} />
 </div>
