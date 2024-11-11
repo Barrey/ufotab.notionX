@@ -76,3 +76,13 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+<a href="https://ko-fi.com/I2I815UCZL" target="_blank">
+  <img
+    height="36"
+    style="border:0px;height:36px;"
+    src="https://storage.ko-fi.com/cdn/kofi3.png?v=6"
+    border="0"
+    alt="Buy Me a Coffee at ko-fi.com"
+  />
+</a>
