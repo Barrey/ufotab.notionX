@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { ViewControls } from './ViewControls';
 import { CodeBlock } from './CodeBlock';
+import components from '../figma/components';
 
 interface PreviewProps {
   code: string;
   title: string;
   hideCode?: boolean;
+  path?: string;
 }
 
 const viewportClasses = {
@@ -14,7 +16,12 @@ const viewportClasses = {
   mobile: 'w-[375px]',
 };
 
-export function Preview({ code, title, hideCode = false }: PreviewProps) {
+export function Preview({
+  code,
+  title,
+  hideCode = false,
+  path = '',
+}: PreviewProps) {
   const [view, setView] = useState<'desktop' | 'tablet' | 'mobile'>('desktop');
   const [copied, setCopied] = useState(false);
   const [isCodeVisible, setIsCodeVisible] = useState(false);
@@ -23,6 +30,35 @@ export function Preview({ code, title, hideCode = false }: PreviewProps) {
     await navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleCopyToFigma = async () => {
+    const [pathComponent, fileComponent] = path.split('/').slice(-2);
+    const component = components.find((c) => c.path === pathComponent);
+
+    if (!component) {
+      alert('Component not found');
+      return;
+    }
+
+    const figmaComponent = component.figma_components.find(
+      (c) => c.path === fileComponent
+    );
+
+    if (!figmaComponent) {
+      console.error('Figma component not found');
+
+      return;
+    }
+
+    try {
+      const blob = new Blob([figmaComponent.code], { type: 'text/html' });
+      const item = new ClipboardItem({ 'text/html': blob });
+      await navigator.clipboard.write([item]);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+      alert('Failed to copy Figma component.');
+    }
   };
 
   return (
@@ -68,7 +104,11 @@ export function Preview({ code, title, hideCode = false }: PreviewProps) {
               </svg>
             </button>
             {isCodeVisible && code !== '' && (
-              <CodeBlock code={code} onCopy={handleCopy} />
+              <CodeBlock
+                code={code}
+                onCopy={handleCopy}
+                onCopyToFigma={handleCopyToFigma}
+              />
             )}
           </>
         )}

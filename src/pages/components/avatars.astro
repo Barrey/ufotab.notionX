@@ -39,7 +39,11 @@ const avatars = await Promise.all(
         avatars.map((avatar) => (
           <section>
             <p class="text-gray-600 mb-4">{avatar.description}</p>
-            <PreviewWrapper title={avatar.title} code={avatar.code} />
+            <PreviewWrapper
+              title={avatar.title}
+              code={avatar.code}
+              path={avatar.path}
+            />
           </section>
         ))
       }
