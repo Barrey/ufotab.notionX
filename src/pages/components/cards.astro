@@ -50,7 +50,7 @@ const cards = await Promise.all(
         cards.map((card) => (
           <section>
             <p class="text-gray-600 mb-4">{card.description}</p>
-            <PreviewWrapper title={card.title} code={card.code} />
+            <PreviewWrapper title={card.title} code={card.code} path={card.path} />
           </section>
         ))
       }
