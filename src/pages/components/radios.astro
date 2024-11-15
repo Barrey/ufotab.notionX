@@ -1,35 +1,35 @@
 ---
-import DocsLayout from '../../layouts/DocsLayout.astro';
-import PreviewWrapper from '../../components/PreviewWrapper.astro';
-import { readFile } from 'node:fs/promises';
+import DocsLayout from "../../layouts/DocsLayout.astro";
+import PreviewWrapper from "../../components/PreviewWrapper.astro";
+import { readFile } from "node:fs/promises";
 
 const radioComponents = [
   {
-    path: 'src/components/html/radios/radio1.html',
-    title: 'Radio Example',
-    description: 'The radio component is used for general purposes.',
+    path: "src/components/html/radios/radio1.html",
+    title: "Radio Example",
+    description: "The radio component is used for general purposes.",
   },
   {
-    path: 'src/components/html/radios/radio2.html',
-    title: 'Radio with size variations',
-    description: 'The radio component with size variations.',
+    path: "src/components/html/radios/radio2.html",
+    title: "Radio with size variations",
+    description: "The radio component with size variations.",
   },
   {
-    path: 'src/components/html/radios/radio3.html',
-    title: 'Radio with state variations',
-    description: 'The radio component with state variations.',
+    path: "src/components/html/radios/radio3.html",
+    title: "Radio with state variations",
+    description: "The radio component with state variations.",
   },
   {
-    path: 'src/components/html/radios/radio4.html',
-    title: 'Radio with group',
-    description: 'The radio component with group.',
+    path: "src/components/html/radios/radio4.html",
+    title: "Radio with group",
+    description: "The radio component with group.",
   },
 ];
 
 const radios = await Promise.all(
   radioComponents.map(async (file) => ({
     ...file,
-    code: await readFile(file.path, 'utf-8'),
+    code: await readFile(file.path, "utf-8"),
   }))
 );
 ---
@@ -45,7 +45,11 @@ const radios = await Promise.all(
         radios.map((radio) => (
           <section>
             <p class="text-gray-600 mb-4">{radio.description}</p>
-            <PreviewWrapper title={radio.title} code={radio.code} />
+            <PreviewWrapper
+              title={radio.title}
+              code={radio.code}
+              path={radio.path}
+            />
           </section>
         ))
       }

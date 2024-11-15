@@ -1,50 +1,50 @@
 ---
-import DocsLayout from '../../layouts/DocsLayout.astro';
-import PreviewWrapper from '../../components/PreviewWrapper.astro';
-import { readFile } from 'node:fs/promises';
+import DocsLayout from "../../layouts/DocsLayout.astro";
+import PreviewWrapper from "../../components/PreviewWrapper.astro";
+import { readFile } from "node:fs/promises";
 
 const listComponents = [
   {
-    path: 'src/components/html/lists/list1.html',
-    title: 'List Example',
-    description: 'The list component is used for general purposes.',
+    path: "src/components/html/lists/list1.html",
+    title: "List Example",
+    description: "The list component is used for general purposes.",
   },
   {
-    path: 'src/components/html/lists/list2.html',
-    title: 'List with size variations',
-    description: 'The list component with size variations.',
+    path: "src/components/html/lists/list2.html",
+    title: "List with size variations",
+    description: "The list component with size variations.",
   },
   {
-    path: 'src/components/html/lists/list3.html',
-    title: 'List with color variations',
-    description: 'The list component with color variations.',
+    path: "src/components/html/lists/list3.html",
+    title: "List with color variations",
+    description: "The list component with color variations.",
   },
   {
-    path: 'src/components/html/lists/list4.html',
-    title: 'List with states',
-    description: 'The list component with states.',
+    path: "src/components/html/lists/list4.html",
+    title: "List with states",
+    description: "The list component with states.",
   },
   {
-    path: 'src/components/html/lists/list5.html',
-    title: 'List with nested items',
-    description: 'The list component with nested items.',
+    path: "src/components/html/lists/list5.html",
+    title: "List with nested items",
+    description: "The list component with nested items.",
   },
   {
-    path: 'src/components/html/lists/list6.html',
-    title: 'List with expandable items',
-    description: 'The list component with expandable items.',
+    path: "src/components/html/lists/list6.html",
+    title: "List with expandable items",
+    description: "The list component with expandable items.",
   },
   {
-    path: 'src/components/html/lists/list7.html',
-    title: 'List with mixed items',
-    description: 'The list component with mixed items.',
+    path: "src/components/html/lists/list7.html",
+    title: "List with mixed items",
+    description: "The list component with mixed items.",
   },
 ];
 
 const lists = await Promise.all(
   listComponents.map(async (file) => ({
     ...file,
-    code: await readFile(file.path, 'utf-8'),
+    code: await readFile(file.path, "utf-8"),
   }))
 );
 ---
@@ -60,7 +60,11 @@ const lists = await Promise.all(
         lists.map((list) => (
           <section>
             <p class="text-gray-600 mb-4">{list.description}</p>
-            <PreviewWrapper title={list.title} code={list.code} />
+            <PreviewWrapper
+              title={list.title}
+              code={list.code}
+              path={list.path}
+            />
           </section>
         ))
       }
