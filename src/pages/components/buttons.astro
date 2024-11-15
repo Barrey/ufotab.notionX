@@ -61,7 +61,7 @@ const buttons = await Promise.all(
         buttons.map((button) => (
           <section>
             <p class="text-gray-600 mb-4">{button.description}</p>
-            <PreviewWrapper title={button.title} code={button.code} />
+            <PreviewWrapper title={button.title} code={button.code} path={button.path} />
           </section>
         ))
       }
