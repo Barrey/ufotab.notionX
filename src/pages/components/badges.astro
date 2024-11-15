@@ -59,7 +59,7 @@ const badges = await Promise.all(
         badges.map((badge) => (
           <section>
             <p class="text-gray-600 mb-4">{badge.description}</p>
-            <PreviewWrapper title={badge.title} code={badge.code} />
+            <PreviewWrapper title={badge.title} code={badge.code} path={badge.path} />
           </section>
         ))
       }
