@@ -1,40 +1,40 @@
 ---
-import DocsLayout from '../../layouts/DocsLayout.astro';
-import PreviewWrapper from '../../components/PreviewWrapper.astro';
-import { readFile } from 'node:fs/promises';
+import DocsLayout from "../../layouts/DocsLayout.astro";
+import PreviewWrapper from "../../components/PreviewWrapper.astro";
+import { readFile } from "node:fs/promises";
 
 const inputComponents = [
   {
-    path: 'src/components/html/inputs/input1.html',
-    title: 'Input Example',
-    description: 'The input component is used for general purposes.',
+    path: "src/components/html/inputs/input1.html",
+    title: "Input Example",
+    description: "The input component is used for general purposes.",
   },
   {
-    path: 'src/components/html/inputs/input2.html',
-    title: 'Input with size variations',
-    description: 'The input component with size variations.',
+    path: "src/components/html/inputs/input2.html",
+    title: "Input with size variations",
+    description: "The input component with size variations.",
   },
   {
-    path: 'src/components/html/inputs/input3.html',
-    title: 'Input with state variations',
-    description: 'The input component with state variations.',
+    path: "src/components/html/inputs/input3.html",
+    title: "Input with state variations",
+    description: "The input component with state variations.",
   },
   {
-    path: 'src/components/html/inputs/input4.html',
-    title: 'Input with icon',
-    description: 'The input component with icon.',
+    path: "src/components/html/inputs/input4.html",
+    title: "Input with icon",
+    description: "The input component with icon.",
   },
   {
-    path: 'src/components/html/inputs/input5.html',
-    title: 'Input with group',
-    description: 'The input component with group.',
+    path: "src/components/html/inputs/input5.html",
+    title: "Input with group",
+    description: "The input component with group.",
   },
 ];
 
 const inputs = await Promise.all(
   inputComponents.map(async (file) => ({
     ...file,
-    code: await readFile(file.path, 'utf-8'),
+    code: await readFile(file.path, "utf-8"),
   }))
 );
 ---
@@ -50,7 +50,11 @@ const inputs = await Promise.all(
         inputs.map((input) => (
           <section>
             <p class="text-gray-600 mb-4">{input.description}</p>
-            <PreviewWrapper title={input.title} code={input.code} />
+            <PreviewWrapper
+              title={input.title}
+              code={input.code}
+              path={input.path}
+            />
           </section>
         ))
       }
