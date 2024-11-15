@@ -1,25 +1,25 @@
 ---
-import DocsLayout from '../../layouts/DocsLayout.astro';
-import PreviewWrapper from '../../components/PreviewWrapper.astro';
-import { readFile } from 'node:fs/promises';
+import DocsLayout from "../../layouts/DocsLayout.astro";
+import PreviewWrapper from "../../components/PreviewWrapper.astro";
+import { readFile } from "node:fs/promises";
 
 const formComponents = [
   {
-    path: 'src/components/html/forms/form1.html',
-    title: 'Form Example',
-    description: 'The form component is used for login purpose.',
+    path: "src/components/html/forms/form1.html",
+    title: "Form Example",
+    description: "The form component is used for login purpose.",
   },
   {
-    path: 'src/components/html/forms/form2.html',
-    title: 'Form Newsletter Example',
-    description: 'The form component is used for newsletter subscription.',
+    path: "src/components/html/forms/form2.html",
+    title: "Form Newsletter Example",
+    description: "The form component is used for newsletter subscription.",
   },
 ];
 
 const forms = await Promise.all(
   formComponents.map(async (file) => ({
     ...file,
-    code: await readFile(file.path, 'utf-8'),
+    code: await readFile(file.path, "utf-8"),
   }))
 );
 ---
@@ -35,7 +35,11 @@ const forms = await Promise.all(
         forms.map((form) => (
           <section>
             <p class="text-gray-600 mb-4">{form.description}</p>
-            <PreviewWrapper title={form.title} code={form.code} />
+            <PreviewWrapper
+              title={form.title}
+              code={form.code}
+              path={form.path}
+            />
           </section>
         ))
       }
