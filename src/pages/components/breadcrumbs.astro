@@ -1,45 +1,45 @@
 ---
-import DocsLayout from '../../layouts/DocsLayout.astro';
-import PreviewWrapper from '../../components/PreviewWrapper.astro';
-import { readFile } from 'node:fs/promises';
+import DocsLayout from "../../layouts/DocsLayout.astro";
+import PreviewWrapper from "../../components/PreviewWrapper.astro";
+import { readFile } from "node:fs/promises";
 
 const breadcrumbComponents = [
   {
-    path: 'src/components/html/breadcrumbs/breadcrumb1.html',
-    title: 'Breadcrumb Example',
-    description: 'The breadcrumb component is used for general purposes.',
+    path: "src/components/html/breadcrumbs/breadcrumb1.html",
+    title: "Breadcrumb Example",
+    description: "The breadcrumb component is used for general purposes.",
   },
   {
-    path: 'src/components/html/breadcrumbs/breadcrumb3.html',
-    title: 'Breadcrumb with size variations',
-    description: 'The breadcrumb component with size variations.',
+    path: "src/components/html/breadcrumbs/breadcrumb3.html",
+    title: "Breadcrumb with size variations",
+    description: "The breadcrumb component with size variations.",
   },
   {
-    path: 'src/components/html/breadcrumbs/breadcrumb2.html',
-    title: 'Breadcrumb with color variations',
-    description: 'The breadcrumb component with color variations.',
+    path: "src/components/html/breadcrumbs/breadcrumb2.html",
+    title: "Breadcrumb with color variations",
+    description: "The breadcrumb component with color variations.",
   },
   {
-    path: 'src/components/html/breadcrumbs/breadcrumb4.html',
-    title: 'Breadcrumb with states',
-    description: 'The breadcrumb component with states.',
+    path: "src/components/html/breadcrumbs/breadcrumb4.html",
+    title: "Breadcrumb with states",
+    description: "The breadcrumb component with states.",
   },
   {
-    path: 'src/components/html/breadcrumbs/breadcrumb5.html',
-    title: 'Breadcrumb with contextual usage',
-    description: 'The breadcrumb component with contextual usage.',
+    path: "src/components/html/breadcrumbs/breadcrumb5.html",
+    title: "Breadcrumb with contextual usage",
+    description: "The breadcrumb component with contextual usage.",
   },
   {
-    path: 'src/components/html/breadcrumbs/breadcrumb6.html',
-    title: 'Breadcrumb with special effects',
-    description: 'The breadcrumb component with special effects.',
+    path: "src/components/html/breadcrumbs/breadcrumb6.html",
+    title: "Breadcrumb with special effects",
+    description: "The breadcrumb component with special effects.",
   },
 ];
 
 const breadcrumbs = await Promise.all(
   breadcrumbComponents.map(async (file) => ({
     ...file,
-    code: await readFile(file.path, 'utf-8'),
+    code: await readFile(file.path, "utf-8"),
   }))
 );
 ---
@@ -56,7 +56,11 @@ const breadcrumbs = await Promise.all(
         breadcrumbs.map((breadcrumb) => (
           <section>
             <p class="text-gray-600 mb-4">{breadcrumb.description}</p>
-            <PreviewWrapper title={breadcrumb.title} code={breadcrumb.code} />
+            <PreviewWrapper
+              title={breadcrumb.title}
+              code={breadcrumb.code}
+              path={breadcrumb.path}
+            />
           </section>
         ))
       }
