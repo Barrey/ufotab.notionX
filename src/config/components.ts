@@ -107,5 +107,11 @@ export const components: ComponentConfig[] = [
     href: '/components/icons',
     title: 'Icons',
     description: 'List of icon libraries.',
+  },
+  {
+    href: '/components/progressbars',
+    title: 'Progress Bars',
+    description: 'Display the progress bar.',
+    total: getComponentCount('progressbars'),
   }
 ].sort((a, b) => a.title.localeCompare(b.title));

@@ -1,0 +1,42 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import PreviewWrapper from '../../components/PreviewWrapper.astro';
+import { readFile } from 'node:fs/promises';
+
+const progressbarComponents = [
+  {
+    path: 'src/components/html/progressbars/progressbar1.html',
+    title: 'Progressbar Example',
+    description: 'The progressbar component is used for general purposes.',
+  },
+];
+
+const progressbars = await Promise.all(
+  progressbarComponents.map(async (file) => ({
+    ...file,
+    code: await readFile(file.path, 'utf-8'),
+  }))
+);
+---
+
+<DocsLayout title="Progress Bar - Documentation">
+  <div class="max-w-4xl">
+    <p class="text-gray-600 mb-8">
+      A collection of progress bar components with different styles and
+      variations.
+    </p>
+
+    <div class="space-y-12">
+      {
+        progressbars.map((progressbar) => (
+          <PreviewWrapper
+            code={progressbar.code}
+            title={progressbar.title}
+            description={progressbar.description}
+            path={progressbar.path}
+          />
+        ))
+      }
+    </div>
+  </div>
+</DocsLayout>
