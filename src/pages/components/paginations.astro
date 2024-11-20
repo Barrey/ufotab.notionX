@@ -1,46 +1,46 @@
 ---
-import DocsLayout from "../../layouts/DocsLayout.astro";
-import PreviewWrapper from "../../components/PreviewWrapper.astro";
-import { readFile } from "node:fs/promises";
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import PreviewWrapper from '../../components/PreviewWrapper.astro';
+import { readFile } from 'node:fs/promises';
 
 const paginationComponents = [
   {
-    path: "src/components/html/paginations/pagination1.html",
-    title: "Pagination Example",
-    description: "The pagination component is used for general purposes.",
+    path: 'src/components/html/paginations/pagination1.html',
+    title: 'Pagination Example',
+    description: 'The pagination component is used for general purposes.',
   },
   {
-    path: "src/components/html/paginations/pagination2.html",
-    title: "Pagination with size variations",
-    description: "The pagination component with size variations.",
+    path: 'src/components/html/paginations/pagination2.html',
+    title: 'Pagination with size variations',
+    description: 'The pagination component with size variations.',
   },
   {
-    path: "src/components/html/paginations/pagination3.html",
-    title: "Pagination with color variations",
-    description: "The pagination component with color variations.",
+    path: 'src/components/html/paginations/pagination3.html',
+    title: 'Pagination with color variations',
+    description: 'The pagination component with color variations.',
   },
   {
-    path: "src/components/html/paginations/pagination4.html",
-    title: "Pagination contextual usage",
-    description: "The pagination component with contextual usage.",
+    path: 'src/components/html/paginations/pagination4.html',
+    title: 'Pagination contextual usage',
+    description: 'The pagination component with contextual usage.',
   },
   {
-    path: "src/components/html/paginations/pagination5.html",
-    title: "Pagination minimal",
-    description: "The pagination component with minimal design.",
+    path: 'src/components/html/paginations/pagination5.html',
+    title: 'Pagination minimal',
+    description: 'The pagination component with minimal design.',
   },
 ];
 
 const paginations = await Promise.all(
   paginationComponents.map(async (file) => ({
     ...file,
-    code: await readFile(file.path, "utf-8"),
+    code: await readFile(file.path, 'utf-8'),
   }))
 );
 ---
 
 <DocsLayout title="Paginations - Documentation">
-  <div class="max-w-4xl">
+  <div class="w-full">
     <p class="text-gray-600 mb-8">
       A collection of pagination components with different styles and
       variations.

@@ -1,56 +1,56 @@
 ---
-import DocsLayout from "../../layouts/DocsLayout.astro";
-import PreviewWrapper from "../../components/PreviewWrapper.astro";
-import { readFile } from "node:fs/promises";
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import PreviewWrapper from '../../components/PreviewWrapper.astro';
+import { readFile } from 'node:fs/promises';
 
 const selectComponents = [
   {
-    path: "src/components/html/selects/select1.html",
-    title: "Select Example",
-    description: "The select component is used for general purposes.",
+    path: 'src/components/html/selects/select1.html',
+    title: 'Select Example',
+    description: 'The select component is used for general purposes.',
   },
   {
-    path: "src/components/html/selects/select2.html",
-    title: "Select with size variations",
-    description: "The select component with size variations.",
+    path: 'src/components/html/selects/select2.html',
+    title: 'Select with size variations',
+    description: 'The select component with size variations.',
   },
   {
-    path: "src/components/html/selects/select3.html",
-    title: "Select with state variations",
-    description: "The select component with state variations.",
+    path: 'src/components/html/selects/select3.html',
+    title: 'Select with state variations',
+    description: 'The select component with state variations.',
   },
   {
-    path: "src/components/html/selects/select4.html",
-    title: "Select with multiple options",
-    description: "The select component with multiple options.",
+    path: 'src/components/html/selects/select4.html',
+    title: 'Select with multiple options',
+    description: 'The select component with multiple options.',
   },
   {
-    path: "src/components/html/selects/select5.html",
-    title: "Select with search",
-    description: "The select component with search.",
+    path: 'src/components/html/selects/select5.html',
+    title: 'Select with search',
+    description: 'The select component with search.',
   },
   {
-    path: "src/components/html/selects/select6.html",
-    title: "Select with icon",
-    description: "The select component with icon.",
+    path: 'src/components/html/selects/select6.html',
+    title: 'Select with icon',
+    description: 'The select component with icon.',
   },
   {
-    path: "src/components/html/selects/select7.html",
-    title: "Select with group",
-    description: "The select component with group.",
+    path: 'src/components/html/selects/select7.html',
+    title: 'Select with group',
+    description: 'The select component with group.',
   },
 ];
 
 const selects = await Promise.all(
   selectComponents.map(async (file) => ({
     ...file,
-    code: await readFile(file.path, "utf-8"),
+    code: await readFile(file.path, 'utf-8'),
   }))
 );
 ---
 
 <DocsLayout title="Selects - Documentation">
-  <div class="max-w-4xl">
+  <div class="w-full">
     <p class="text-gray-600 mb-8">
       A collection of select components with different styles and variations.
     </p>

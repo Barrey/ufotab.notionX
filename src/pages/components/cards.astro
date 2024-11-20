@@ -1,46 +1,46 @@
 ---
-import DocsLayout from "../../layouts/DocsLayout.astro";
-import PreviewWrapper from "../../components/PreviewWrapper.astro";
-import { readFile } from "node:fs/promises";
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import PreviewWrapper from '../../components/PreviewWrapper.astro';
+import { readFile } from 'node:fs/promises';
 
 const cardComponents = [
   {
-    path: "src/components/html/cards/card1.html",
-    title: "Card Example",
-    description: "The card component is used for general purposes.",
+    path: 'src/components/html/cards/card1.html',
+    title: 'Card Example',
+    description: 'The card component is used for general purposes.',
   },
   {
-    path: "src/components/html/cards/card2.html",
-    title: "Card with size variations",
-    description: "The card component with size variations.",
+    path: 'src/components/html/cards/card2.html',
+    title: 'Card with size variations',
+    description: 'The card component with size variations.',
   },
   {
-    path: "src/components/html/cards/card3.html",
-    title: "Card with states",
-    description: "The card component with states.",
+    path: 'src/components/html/cards/card3.html',
+    title: 'Card with states',
+    description: 'The card component with states.',
   },
   {
-    path: "src/components/html/cards/card4.html",
-    title: "Card with contextual usage",
-    description: "The card component with contextual usage.",
+    path: 'src/components/html/cards/card4.html',
+    title: 'Card with contextual usage',
+    description: 'The card component with contextual usage.',
   },
   {
-    path: "src/components/html/cards/card5.html",
-    title: "Card with special effects",
-    description: "The card component with special effects.",
+    path: 'src/components/html/cards/card5.html',
+    title: 'Card with special effects',
+    description: 'The card component with special effects.',
   },
 ];
 
 const cards = await Promise.all(
   cardComponents.map(async (file) => ({
     ...file,
-    code: await readFile(file.path, "utf-8"),
+    code: await readFile(file.path, 'utf-8'),
   }))
 );
 ---
 
 <DocsLayout title="Cards - Documentation">
-  <div class="max-w-4xl">
+  <div class="w-full">
     <p class="text-gray-600 mb-8">
       A collection of card components with different styles and variations.
     </p>
