@@ -1,0 +1,31 @@
+<section class="space-y-4">
+    <!-- Indeterminate State -->
+    <label class="flex items-center space-x-2 cursor-pointer">
+        <input type="checkbox" class="checkbox-indeterminate w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer">
+        <span class="text-base">Indeterminate Checkbox</span>
+    </label>
+
+    <!-- Error State -->
+    <section class="space-y-4">
+        <div class="space-y-1">
+            <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="checkbox" class="w-4 h-4 rounded border-red-300 text-red-500 focus:ring-red-500 cursor-pointer">
+                <span class="text-base text-red-700">Error state checkbox</span>
+            </label>
+            <p class="text-sm text-red-500 ml-6">This field is required</p>
+        </div>
+    </section>
+
+    <!-- Disabled State -->
+    <section class="space-y-4">
+        <label class="flex items-center space-x-2 cursor-not-allowed">
+            <input type="checkbox" disabled class="w-4 h-4 rounded border-gray-200 text-gray-400 cursor-not-allowed">
+            <span class="text-base text-gray-400">Disabled checkbox</span>
+        </label>
+    </section>
+</section>
+
+<script>
+    // Set indeterminate state for demo
+    document.querySelector('.checkbox-indeterminate').indeterminate = true;
+</script>

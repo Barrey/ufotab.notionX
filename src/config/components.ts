@@ -113,5 +113,11 @@ export const components: ComponentConfig[] = [
     title: 'Progress Bars',
     description: 'Display the progress bar.',
     total: getComponentCount('progressbars'),
+  },
+  {
+    href: '/components/checboxes',
+    title: 'Checboxes',
+    description: 'Select multiple options from a list.',
+    total: getComponentCount('checkboxes'),
   }
 ].sort((a, b) => a.title.localeCompare(b.title));

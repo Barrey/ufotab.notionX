@@ -1,0 +1,64 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import PreviewWrapper from '../../components/PreviewWrapper.astro';
+import { readFile } from 'node:fs/promises';
+
+const checkboxComponents = [
+  {
+    path: 'src/components/html/checkboxes/checkbox1.html',
+    title: 'Checkbox Example',
+    description: 'The checkbox component is used for general purposes.',
+  },
+  {
+    path: 'src/components/html/checkboxes/checkbox2.html',
+    title: 'Checkbox with size variations',
+    description: 'The checkbox component with size variations.',
+  },
+  {
+    path: 'src/components/html/checkboxes/checkbox3.html',
+    title: 'Checkbox with states',
+    description: 'The checkbox component with states.',
+  },
+  {
+    path: 'src/components/html/checkboxes/checkbox4.html',
+    title: 'Checkbox with alignment',
+    description: 'The checkbox component with alignment.',
+  },
+  {
+    path: 'src/components/html/checkboxes/checkbox5.html',
+    title: 'Checkbox with helper text',
+    description: 'The checkbox component with helper text.',
+  },
+];
+
+const checkboxes = await Promise.all(
+  checkboxComponents.map(async (file) => ({
+    ...file,
+    code: await readFile(file.path, 'utf-8'),
+  }))
+);
+---
+
+<DocsLayout title="Checkboxs - Documentation">
+  <div class="w-full">
+    <p class="text-gray-600 mb-8">
+      A collection of checkbox components with different styles and
+      variations.
+    </p>
+
+    <div class="space-y-12">
+      {
+        checkboxes.map((checkbox) => (
+          <section>
+            <p class="text-gray-600 mb-4">{checkbox.description}</p>
+            <PreviewWrapper
+              title={checkbox.title}
+              code={checkbox.code}
+              path={checkbox.path}
+            />
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</DocsLayout>
