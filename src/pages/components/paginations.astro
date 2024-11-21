@@ -41,16 +41,11 @@ const paginations = await Promise.all(
 
 <DocsLayout title="Paginations - Documentation">
   <div class="w-full">
-    <p class="text-gray-600 mb-8">
-      A collection of pagination components with different styles and
-      variations.
-    </p>
 
     <div class="space-y-12">
       {
         paginations.map((pagination) => (
           <section>
-            <p class="text-gray-600 mb-4">{pagination.description}</p>
             <PreviewWrapper
               title={pagination.title}
               code={pagination.code}

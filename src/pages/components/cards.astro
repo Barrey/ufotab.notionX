@@ -41,15 +41,10 @@ const cards = await Promise.all(
 
 <DocsLayout title="Cards - Documentation">
   <div class="w-full">
-    <p class="text-gray-600 mb-8">
-      A collection of card components with different styles and variations.
-    </p>
-
     <div class="space-y-12">
       {
         cards.map((card) => (
           <section>
-            <p class="text-gray-600 mb-4">{card.description}</p>
             <PreviewWrapper
               title={card.title}
               code={card.code}

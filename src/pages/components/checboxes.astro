@@ -41,16 +41,10 @@ const checkboxes = await Promise.all(
 
 <DocsLayout title="Checkboxs - Documentation">
   <div class="w-full">
-    <p class="text-gray-600 mb-8">
-      A collection of checkbox components with different styles and
-      variations.
-    </p>
-
     <div class="space-y-12">
       {
         checkboxes.map((checkbox) => (
           <section>
-            <p class="text-gray-600 mb-4">{checkbox.description}</p>
             <PreviewWrapper
               title={checkbox.title}
               code={checkbox.code}

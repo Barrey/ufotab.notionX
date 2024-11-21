@@ -36,15 +36,11 @@ const radios = await Promise.all(
 
 <DocsLayout title="Radios - Documentation">
   <div class="w-full">
-    <p class="text-gray-600 mb-8">
-      A collection of radio components with different styles and variations.
-    </p>
 
     <div class="space-y-12">
       {
         radios.map((radio) => (
           <section>
-            <p class="text-gray-600 mb-4">{radio.description}</p>
             <PreviewWrapper
               title={radio.title}
               code={radio.code}

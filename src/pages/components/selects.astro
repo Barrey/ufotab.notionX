@@ -51,15 +51,10 @@ const selects = await Promise.all(
 
 <DocsLayout title="Selects - Documentation">
   <div class="w-full">
-    <p class="text-gray-600 mb-8">
-      A collection of select components with different styles and variations.
-    </p>
-
     <div class="space-y-12">
       {
         selects.map((select) => (
           <section>
-            <p class="text-gray-600 mb-4">{select.description}</p>
             <PreviewWrapper
               title={select.title}
               code={select.code}

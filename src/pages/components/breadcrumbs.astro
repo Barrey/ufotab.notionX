@@ -46,16 +46,10 @@ const breadcrumbs = await Promise.all(
 
 <DocsLayout title="Breadcrumbs - Documentation">
   <div class="w-full">
-    <p class="text-gray-600 mb-8">
-      A collection of breadcrumb components with different styles and
-      variations.
-    </p>
-
     <div class="space-y-12">
       {
         breadcrumbs.map((breadcrumb) => (
           <section>
-            <p class="text-gray-600 mb-4">{breadcrumb.description}</p>
             <PreviewWrapper
               title={breadcrumb.title}
               code={breadcrumb.code}

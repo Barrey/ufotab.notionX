@@ -51,15 +51,11 @@ const lists = await Promise.all(
 
 <DocsLayout title="Lists - Documentation">
   <div class="w-full">
-    <p class="text-gray-600 mb-8">
-      A collection of list components with different styles and variations.
-    </p>
 
     <div class="space-y-12">
       {
         lists.map((list) => (
           <section>
-            <p class="text-gray-600 mb-4">{list.description}</p>
             <PreviewWrapper
               title={list.title}
               code={list.code}

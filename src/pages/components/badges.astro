@@ -50,15 +50,11 @@ const badges = await Promise.all(
 
 <DocsLayout title="Badges - Documentation">
   <div class="w-full">
-    <p class="text-gray-600 mb-8">
-      A collection of badge components with different styles and variations.
-    </p>
 
     <div class="space-y-12">
       {
         badges.map((badge) => (
           <section>
-            <p class="text-gray-600 mb-4">{badge.description}</p>
             <PreviewWrapper
               title={badge.title}
               code={badge.code}
