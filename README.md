@@ -75,6 +75,8 @@ All commands are run from the root of the project, from a terminal:
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
 
+View it live at [https://notionx.ufotab.com](https://notionx.ufotab.com)
+
 <a href="https://ko-fi.com/I2I815UCZL" target="_blank">
   <img
     height="36"
