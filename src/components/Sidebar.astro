@@ -1,6 +1,6 @@
 ---
-import { components } from '../config/components';
-import { Github, X } from 'lucide-react';
+import { components } from "../config/components";
+import { Github, X } from "lucide-react";
 
 // Group components by category
 const categories = {
@@ -43,8 +43,8 @@ const categories = {
                         block px-4 py-2 rounded-md text-sm transition-colors
                         ${
                           isActive
-                            ? 'bg-gradient-to-r from-blue-50 to-purple-50 text-blue-600 font-medium'
-                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                            ? "bg-gradient-to-r from-blue-50 to-purple-50 text-blue-600 font-medium"
+                            : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                         }
                       `}
                     >
@@ -52,7 +52,7 @@ const categories = {
                         <div>
                           <span>{item.title}</span>
                           {item?.total && (
-                            <span class="px-2.5 py-1 text-sm font-medium bg-[#e6f4eb] text-[#2d7b43] rounded-full">
+                            <span class="px-2.5 py-1 text-sm font-medium bg-green-50 text-green-700 rounded-full">
                               {item.total}
                             </span>
                           )}
