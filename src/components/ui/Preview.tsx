@@ -63,14 +63,14 @@ export function Preview({
 
   return (
     <div className="border rounded-lg overflow-hidden bg-white shadow-lg mb-8">
-      <div className="border-b p-4 bg-gray-50 flex justify-between items-center">
+      <div className="border-b p-4 flex justify-between items-center">
         <h3 className="font-medium text-gray-700">{title}</h3>
         <ViewControls currentView={view} onViewChange={setView} />
       </div>
 
       <div className="p-4 flex justify-center h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
         <div
-          className={`${viewportClasses[view]} transition-all duration-300 border border-[#e0e0e0] bg-gray-50`}
+          className={`${viewportClasses[view]} transition-all duration-300 border border-gray-200 `}
         >
           <div
             className="rounded p-4"
