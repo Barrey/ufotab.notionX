@@ -27,17 +27,9 @@ Skip the setup. Forget about installing packages. NotionX Tailwind Blocks gives 
 - 🚀 **Just Copy & Paste** - No npm install, no dependencies
 - 💅 **Production-Ready Design** - Professionally crafted components
 - 📱 **Responsive by Default** - Looks great on any device
-- ♿ **Accessible Components** - Built following WCAG guidelines
+- 🎯 **Basic Accessibility** - Includes fundamental ARIA attributes
 - 🎯 **Zero Config** - Works with any Tailwind CSS project
 - ⚡ **Instant Usage** - No build steps, no compilation needed
-
-## 🎯 Perfect For
-
-- 🏃‍♂️ **Rapid Prototyping** - Build MVPs and prototypes at lightning speed
-- 🎨 **Design Systems** - Start with battle-tested components
-- 🚀 **Landing Pages** - Create stunning marketing pages in minutes
-- 💼 **Business Websites** - Professional components for company sites
-- 📱 **Web Applications** - Essential UI building blocks for any web app
 
 ## 🚀 Getting Started
 
@@ -72,8 +64,6 @@ All commands are run from the root of the project, from a terminal:
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
 
 View it live at [https://notionx.ufotab.com](https://notionx.ufotab.com)
 
