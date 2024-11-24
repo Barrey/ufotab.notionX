@@ -75,12 +75,12 @@ export function Preview({
           </div>
         </div>
 
-        <div className="p-4 flex justify-center h-full w-full bg-white dark:bg-gray-800 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#374151_1px,transparent_1px)] [background-size:16px_16px]">
+        <div className="flex justify-center h-full w-full bg-white dark:bg-gray-800 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#374151_1px,transparent_1px)] [background-size:16px_16px]">
           <div
             className={`${viewportClasses[view]} transition-all duration-300 border border-gray-200 dark:border-gray-700`}
           >
             <div
-              className="rounded p-4"
+              className="rounded"
               dangerouslySetInnerHTML={{ __html: code }}
             />
           </div>
